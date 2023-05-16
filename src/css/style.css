@@ -1,0 +1,161 @@
+html, body {
+    height: 100%;
+    min-height: 100%;
+}
+body {
+    font-family: "Trebuchet MS";
+    background-color: #002137;
+}
+#heroImageBox {
+    position: relative;
+    /* width: 20rem; */
+    text-align: center;
+    height: 45vh;
+    margin: 0 auto;
+}
+#heroImage{
+    height: 44vh;
+    object-fit: cover; 
+}
+.container {
+    position: relative;
+    max-width: 90vw;
+    width: 100vw;
+}
+.content{
+    background-color: #002945;
+}
+.smallBox{
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 20rem;
+}
+#heroBox {
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+#heroText, #contentText, #footer {
+    font-size: 1.2vw;
+}
+#cv {
+    width: 50vw;
+    margin: 0 auto;
+}
+.text-justify {
+    text-align: justify;
+}
+.icon {
+    height: 3vh;
+}
+a {
+    max-width: min-content;
+}
+.nowrap {
+    white-space: nowrap;
+    color: white;
+}
+#text{
+    margin: 0 auto;
+    position: relative;
+}
+#text2{
+    position: relative;
+    width: fit-content;
+    font-size: 1.2vw !important;
+}
+#textHalf{
+    max-width: 50vw;
+    float: right;
+}
+.textInvert {
+    max-width: 50vw;
+    float: left;
+}
+#imgHalf{
+    float: right;
+    overflow: visible;
+}
+.imgInvert{
+    float: left;
+    overflow: visible;
+}
+.imgProject{
+    width: 20vw;
+}
+#info {
+    background-color: #002945;
+}
+#projects {
+    background-color: #002137;
+    min-height: 100vh;
+}
+.project{
+    min-height: 40vh;
+    min-width: 80vw;
+    max-width: 80vw;
+    margin: 0 auto;
+    margin-bottom: 10vh;
+}
+#master {
+    min-height: 100vh;
+}
+.button{
+    transition: 150ms all;
+    background-color: #038177;
+}
+.linkImg{
+    height: 6vh;
+    margin-right: 10px;
+}
+.linktext{
+    text-decoration: none;
+    color: #038177;
+    font-size: 1.5vw;
+}
+.links{
+    max-width: min-content;
+    margin: 0 auto;
+    position: relative;
+}
+.nav-link{
+    transition: all 50ms;
+}
+.nav-link:hover{
+    scale: 1.2;
+}
+.mx-6{
+    margin: 0 15vw;
+    margin-bottom: 2vh;
+}
+.display-6, .display-2{
+    font-size: 3vw;
+}
+a:hover{
+    color: #038177;
+}
+.linkItem{
+    transition: all 150ms;
+}
+.linkItem:hover{
+    scale: 1.5;
+}
+.button:hover{
+    cursor: pointer;
+    background-color: #016b62;
+    scale: 1.1;
+}
+/* 
+palette 
+#00111c
+#001523
+#001a2c
+#002137
+#00253e
+#002945
+#002e4e
+#003356
+#003a61
+#00406c 
+*/
