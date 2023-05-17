@@ -8,7 +8,6 @@ body {
 }
 #heroImageBox {
     position: relative;
-    /* width: 20rem; */
     text-align: center;
     height: 45vh;
     margin: 0 auto;
@@ -36,8 +35,8 @@ body {
     display: flex;
     align-items: center;
 }
-#heroText, #contentText, #footer {
-    font-size: 1.2vw;
+#heroText, #contentText, #footer, #cv {
+    font-size: 1vw;
 }
 #cv {
     width: 50vw;
@@ -63,7 +62,8 @@ a {
 #text2{
     position: relative;
     width: fit-content;
-    font-size: 1.2vw !important;
+    font-size: 1vw !important;
+    overflow: hidden;
 }
 #textHalf{
     max-width: 50vw;
@@ -89,14 +89,15 @@ a {
 }
 #projects {
     background-color: #002137;
-    min-height: 100vh;
+    box-sizing: content-box;
 }
 .project{
-    min-height: 40vh;
+    min-height: 100%;
     min-width: 80vw;
     max-width: 80vw;
     margin: 0 auto;
     margin-bottom: 10vh;
+    overflow: hidden;
 }
 #master {
     min-height: 100vh;
@@ -112,7 +113,7 @@ a {
 .linktext{
     text-decoration: none;
     color: #038177;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
 }
 .links{
     max-width: min-content;
@@ -130,7 +131,7 @@ a {
     margin-bottom: 2vh;
 }
 .display-6, .display-2{
-    font-size: 3vw;
+    font-size: 2.8vw;
 }
 a:hover{
     color: #038177;
@@ -139,12 +140,48 @@ a:hover{
     transition: all 150ms;
 }
 .linkItem:hover{
-    scale: 1.5;
+    scale: 1.2;
 }
 .button:hover{
     cursor: pointer;
     background-color: #016b62;
     scale: 1.1;
+}
+@media (max-width:1000px) {
+    #heroImage, #heroImageBox{
+        height: 20vh;
+    }
+    #heroText, #contentText, #footer, .smallBox, .linktext, #cv {
+        font-size: 2.8vw;
+    }
+    .display-6, .display-2{
+        font-size: 4.8vw;
+    }
+    #heroBox{
+        min-height: 60vh;
+    }
+    #cv{
+        margin: 0 15vw;
+        width: 70vw;
+    }
+    #projetos{
+        margin-bottom: 10vh;
+    }
+    #textHalf, .textInvert{
+        max-width: none;
+        margin: 0 auto;
+    }
+    #imgHalf, .imgInvert{
+        text-align: center;
+        width: 100%;
+    }
+    .imgProject{
+        margin: 0 auto 3vh auto !important;
+        width: 50vw;
+    }
+    .project{
+        margin-bottom: 5vh;
+    }
 }
 /* 
 palette 
