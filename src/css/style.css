@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     min-height: 100%;
+    max-width: 100%;
 }
 body {
     font-family: "Trebuchet MS";
@@ -46,7 +47,7 @@ body {
     text-align: justify;
 }
 .icon {
-    height: 3vh;
+    width: 1.5vw;
 }
 a {
     max-width: min-content;
@@ -155,7 +156,7 @@ a:hover{
         font-size: 2.8vw;
     }
     .display-6, .display-2{
-        font-size: 4.8vw;
+        font-size: calc(1.425rem + 3vw);
     }
     #heroBox{
         min-height: 60vh;
@@ -182,7 +183,23 @@ a:hover{
     .project{
         margin-bottom: 5vh;
     }
+    .icon {
+        width: 5vw;
+    }
 }
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background: #0381774f ;
+}
+::-webkit-scrollbar-thumb {
+    background: #038177;
+    border-radius: 7px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #006d64;
+} 
 /* 
 palette 
 #00111c
@@ -195,4 +212,6 @@ palette
 #003356
 #003a61
 #00406c 
+
+#038177
 */
