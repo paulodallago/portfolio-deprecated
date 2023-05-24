@@ -4,7 +4,7 @@ html, body {
     max-width: 100%;
 }
 body {
-    font-family: "Trebuchet MS";
+    font-family: 'Montserrat';
     background-color: #002137;
 }
 #heroImageBox {
@@ -148,6 +148,130 @@ a:hover{
     background-color: #016b62;
     scale: 1.1;
 }
+.language{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40vw;
+    height: 30px;
+    border-radius: 8px;
+    background-color: rgb(27, 27, 27);
+}
+/* For mozilla */
+::-moz-range-thumb{
+    height: 7vh;
+    width: 7vh;
+    background: transparent;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 0;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+::-moz-range-progress{
+    height: 100%;
+    border-radius: 8px;
+}
+.js::-moz-range-progress{
+    background-color: #ccba44;
+}
+.js::-moz-range-thumb{
+    background-image: url(../img/lg/js.png);
+}
+.ts::-moz-range-progress{
+    background-color: #006db6;
+}
+.ts::-moz-range-thumb{
+    background-image: url(../img/lg/ts.png);
+}
+.java::-moz-range-progress{
+    background-color: #e76f00;
+}
+.java::-moz-range-thumb{
+    background-image: url(../img/lg/java.png);
+}
+.sql::-moz-range-progress{
+    background-color: #1f64a8;
+}
+.sql::-moz-range-thumb{
+    background-image: url(../img/lg/sql.png);
+}
+.html::-moz-range-progress{
+    background-color: #cd4420;
+}
+.html::-moz-range-thumb{
+    background-image: url(../img/lg/html.png);
+}
+.css::-moz-range-progress{
+    background-color: #105f99;
+}
+.css::-moz-range-thumb{
+    background-image: url(../img/lg/css.png);
+}
+/* For chrome */
+@supports (not (-moz-appearance: none)) {
+    .js{
+        background-color: #ccba44;
+    }
+    .ts{
+        background-color: #006db6;
+    }
+    .java{
+        background-color: #e76f00;
+    }
+    .sql{
+        background-color: #1f64a8;
+    }
+    .html{
+        background-color: #cd4420;
+    }
+    .css{
+        background-color: #105f99;
+    }
+}
+::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 7vh;
+    width: 7vh;
+    background: transparent;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+.js::-webkit-slider-thumb{
+    background-image: url(../img/lg/js.png);
+}
+.ts::-webkit-slider-thumb{
+    background-image: url(../img/lg/ts.png);
+}
+.java::-webkit-slider-thumb{
+    background-image: url(../img/lg/java.png);
+}
+.sql::-webkit-slider-thumb{
+    background-image: url(../img/lg/sql.png);
+}
+.html::-webkit-slider-thumb{
+    background-image: url(../img/lg/html.png);
+}
+.css::-webkit-slider-thumb{
+    background-image: url(../img/lg/css.png);
+}
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background: #0381774f ;
+}
+::-webkit-scrollbar-thumb {
+    background: #038177;
+    border-radius: 7px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #006d64;
+} 
+/* For mobile */
 @media (max-width:1000px) {
     #heroImage, #heroImageBox{
         height: 20vh;
@@ -186,32 +310,11 @@ a:hover{
     .icon {
         width: 5vw;
     }
+    .smallBox{
+        margin: 0 auto;
+        max-width: 40rem;
+    }
+    .language{
+        width: 70vw;
+    }
 }
-::-webkit-scrollbar {
-    width: 15px;
-}
-::-webkit-scrollbar-track {
-    background: #0381774f ;
-}
-::-webkit-scrollbar-thumb {
-    background: #038177;
-    border-radius: 7px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #006d64;
-} 
-/* 
-palette 
-#00111c
-#001523
-#001a2c
-#002137
-#00253e
-#002945
-#002e4e
-#003356
-#003a61
-#00406c 
-
-#038177
-*/
