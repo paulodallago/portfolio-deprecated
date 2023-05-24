@@ -317,4 +317,12 @@ a:hover{
     .language{
         width: 70vw;
     }
+    ::-moz-range-thumb{
+        height: 3vh;
+        width: 3vh;
+    }
+    ::-webkit-slider-thumb{
+        height: 3vh;
+        width: 3vh;
+    }
 }
