@@ -148,15 +148,17 @@ a:hover{
     background-color: #016b62;
     scale: 1.1;
 }
-.language{
-    -webkit-appearance: none;
-    appearance: none;
-    width: 40vw;
-    height: 30px;
-    border-radius: 8px;
-    background-color: rgb(27, 27, 27);
-}
 /* For mozilla */
+@supports(-moz-appearance: none){
+    .language{
+        -webkit-appearance: none;
+        appearance: none;
+        width: 40vw;
+        height: 30px;
+        border-radius: 8px;
+        background-color: rgb(27, 27, 27);
+    }
+}
 ::-moz-range-thumb{
     height: 7vh;
     width: 7vh;
@@ -209,23 +211,69 @@ a:hover{
 }
 /* For chrome */
 @supports (not (-moz-appearance: none)) {
-    .js{
-        background-color: #ccba44;
+    input[type="range"]{
+        -webkit-appearance: none;
+        appearance: none;
+        border-radius: 8px;
     }
-    .ts{
-        background-color: #006db6;
+    input[type="range"] {
+        position: relative;
+        background: #fff0;
+        overflow: hidden;
     }
-    .java{
-        background-color: #e76f00;
+    input[type="range"],
+    input[type="range"]::-webkit-slider-runnable-track,
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        transition: all ease 100ms;
+        height: var(--thumb-height);
+        background-color: currentColor;
     }
-    .sql{
-        background-color: #1f64a8;
+    input[type="range"]::-webkit-slider-thumb {
+        --box-fill: calc(-100vmax - var(--thumb-width, var(--thumb-height))) 0 0 101vmax currentColor;
+        box-shadow: var(--box-fill);
+        border-radius: 8px;
+        filter: brightness(100%);
+        clip-path: polygon(
+            100% -1px,
+            var(--clip-edges) -1px,
+            0 var(--clip-top),
+            -100vmax var(--clip-top),
+            -100vmax var(--clip-bottom),
+            0 var(--clip-bottom),
+            var(--clip-edges) 100%,
+            var(--clip-further) var(--clip-further)
+        );
     }
-    .html{
-        background-color: #cd4420;
+    input[type="range"]::-webkit-slider-runnable-track {
+        background: linear-gradient(var(--track-color) 0 0) scroll no-repeat center / 100% calc(var(--track-height) + 100px);
     }
-    .css{
-        background-color: #105f99;
+    input[type="range"]::-webkit-slider-runnable-track:hover {
+        filter: brightness(110%);
+    }
+    input[type="range"] {
+        --thumb-height: 7vh;
+        --track-height: 7vh;
+        --track-color: rgb(27, 27, 27);
+        width: 40vw;
+    }
+    input[type="range"].js{
+        color: #ccba44;
+    }
+    input[type="range"].ts{
+        color: #006db6;
+    }
+    input[type="range"].java{
+        color: #e76f00
+    }
+    input[type="range"].sql{
+        color: #1f64a8;
+    }
+    input[type="range"].html{
+        color: #cd4420;
+    }
+    input[type="range"].css{
+        color: #105f99;
     }
 }
 ::-webkit-slider-thumb{
@@ -239,6 +287,9 @@ a:hover{
     border: 0;
     border-radius: 8px;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+input[type="range"].notcover::-webkit-slider-thumb {
+    background-size: 6vh;
 }
 .js::-webkit-slider-thumb{
     background-image: url(../img/lg/js.png);
@@ -317,11 +368,21 @@ a:hover{
     .language{
         width: 70vw;
     }
-    ::-moz-range-thumb{
+    input[type="range"] {
+        --thumb-height: 3vh;
+        --track-height: 3vh;
+        width: 70vw;
+    }
+    /* chrome */
+    ::-webkit-slider-thumb{
         height: 3vh;
         width: 3vh;
     }
-    ::-webkit-slider-thumb{
+    input[type="range"].notcover::-webkit-slider-thumb {
+        background-size: 2.8vh;
+    }
+    /* moz */
+    ::-moz-range-thumb{
         height: 3vh;
         width: 3vh;
     }
