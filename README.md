@@ -1,3 +1,3 @@
 # portfolio
 
-Ainda em desenvolvimento...
+Uma ferramenta para demonstrar meus conhecimentos e um pouco do meu perfil.

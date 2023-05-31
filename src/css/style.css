@@ -51,6 +51,29 @@ body {
 }
 a {
     max-width: min-content;
+    text-align: center;
+    color: unset;
+    text-decoration: unset;
+}
+p {
+    text-indent: 3rem;
+}
+ul {
+    width: fit-content;
+    margin: 0 auto;
+    text-align: justify;
+}
+.curso{
+    background-color: #038177;
+    transition: all ease 150ms;
+}
+.curso:hover{
+    filter: brightness(90%);
+    scale: 1.1;
+    cursor: pointer;
+}
+li::marker{
+    content: none;
 }
 .nowrap {
     white-space: nowrap;
@@ -104,7 +127,7 @@ a {
     min-height: 100vh;
 }
 .button{
-    transition: 150ms all;
+    transition: 150ms all ease;
     background-color: #038177;
 }
 .linkImg{
@@ -122,7 +145,7 @@ a {
     position: relative;
 }
 .nav-link{
-    transition: all 50ms;
+    transition: all ease 50ms;
 }
 .nav-link:hover{
     scale: 1.2;
@@ -135,17 +158,18 @@ a {
     font-size: 2.8vw;
 }
 a:hover{
-    color: #038177;
+    color: unset;
+    filter: brightness(90%);
 }
 .linkItem{
-    transition: all 150ms;
+    transition: all ease 150ms;
 }
 .linkItem:hover{
     scale: 1.2;
 }
 .button:hover{
     cursor: pointer;
-    background-color: #016b62;
+    filter: brightness(90%);
     scale: 1.1;
 }
 /* For mozilla */
@@ -158,6 +182,13 @@ a:hover{
         border-radius: 8px;
         background-color: rgb(27, 27, 27);
     }
+}
+input[type="range"]{
+    transition: 150ms all ease;
+}
+input[type="range"]:hover{
+    filter: brightness(120%);
+    scale: 1.1;
 }
 ::-moz-range-thumb{
     height: 7vh;
@@ -177,37 +208,37 @@ a:hover{
     background-color: #ccba44;
 }
 .js::-moz-range-thumb{
-    background-image: url(../img/lg/js.png);
+    background-image: url(../img/lang/js.png);
 }
 .ts::-moz-range-progress{
     background-color: #006db6;
 }
 .ts::-moz-range-thumb{
-    background-image: url(../img/lg/ts.png);
+    background-image: url(../img/lang/ts.png);
 }
 .java::-moz-range-progress{
     background-color: #e76f00;
 }
 .java::-moz-range-thumb{
-    background-image: url(../img/lg/java.png);
+    background-image: url(../img/lang/java.png);
 }
 .sql::-moz-range-progress{
     background-color: #1f64a8;
 }
 .sql::-moz-range-thumb{
-    background-image: url(../img/lg/sql.png);
+    background-image: url(../img/lang/sql.png);
 }
 .html::-moz-range-progress{
     background-color: #cd4420;
 }
 .html::-moz-range-thumb{
-    background-image: url(../img/lg/html.png);
+    background-image: url(../img/lang/html.png);
 }
 .css::-moz-range-progress{
     background-color: #105f99;
 }
 .css::-moz-range-thumb{
-    background-image: url(../img/lg/css.png);
+    background-image: url(../img/lang/css.png);
 }
 /* For chrome */
 @supports (not (-moz-appearance: none)) {
@@ -292,22 +323,22 @@ input[type="range"].notcover::-webkit-slider-thumb {
     background-size: 6vh;
 }
 .js::-webkit-slider-thumb{
-    background-image: url(../img/lg/js.png);
+    background-image: url(../img/lang/js.png);
 }
 .ts::-webkit-slider-thumb{
-    background-image: url(../img/lg/ts.png);
+    background-image: url(../img/lang/ts.png);
 }
 .java::-webkit-slider-thumb{
-    background-image: url(../img/lg/java.png);
+    background-image: url(../img/lang/java.png);
 }
 .sql::-webkit-slider-thumb{
-    background-image: url(../img/lg/sql.png);
+    background-image: url(../img/lang/sql.png);
 }
 .html::-webkit-slider-thumb{
-    background-image: url(../img/lg/html.png);
+    background-image: url(../img/lang/html.png);
 }
 .css::-webkit-slider-thumb{
-    background-image: url(../img/lg/css.png);
+    background-image: url(../img/lang/css.png);
 }
 ::-webkit-scrollbar {
     width: 15px;

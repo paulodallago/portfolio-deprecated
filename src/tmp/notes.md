@@ -2,11 +2,11 @@
 
 Esse site foi desenvolvido por mim, Paulo Dal Lago, do início ao fim.
 
-<h2>Paleta de cores</h2>
-
 <h2>Fonte usada</h2>
 Montserrat
 Via Google Fonts
+
+<h2>Paleta de cores</h2>
 
 <h3>Tons de azul</h3>
 #00111c
